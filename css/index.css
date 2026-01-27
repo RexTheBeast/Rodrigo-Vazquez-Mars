@@ -1,0 +1,39 @@
+body {
+    background-image: url("../images/BackGround_Home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+html {
+    color: white;
+}
+
+header{
+    /* background-color: bisque; */
+    padding: 20px;
+    align-items: center;
+}
+
+nav{
+    /* background-color: aqua; */
+    display: flex;
+    gap: 25px;
+    margin-left: 320px;
+    margin-top: 0px;
+    margin-right: 0px;
+}
+
+nav a{
+    font-size: 25px;
+}
+
+.main_title{
+    text-align: center;
+}
+
