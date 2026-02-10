@@ -3,6 +3,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
 }
 
 html, body {
@@ -33,7 +34,51 @@ nav a{
     font-size: 25px;
 }
 
-.main_title{
+#Main_title{
     text-align: center;
+    margin-top: 80px;
+    scroll-margin-top: 100px;
 }
+
+.Nav_Bar{
+    position: fixed;
+    background-color: lightblue;
+    top: 0;
+    width: 100%;
+}
+
+.GitHub-Logo{
+    background-color: white;
+    width: 90px;
+    height: 80px;
+}
+
+.logo-Linkedin{
+    width: 100px;
+    height: 80px;
+}
+
+.work{
+    margin: 10px 0px;
+    margin-bottom: -5px;
+}
+.work_columns{
+    display: flex;
+    gap: 100px;
+}
+
+.row1, .row2{
+    display: flex;
+    flex-direction: row;
+}
+
+.row1 p, h3, .row2 p, h3{
+    margin: 10px 20px;
+}
+
+.list_work_Exp{
+    margin-top: 10px;
+}
+
+
 
