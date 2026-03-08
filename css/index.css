@@ -1,11 +1,13 @@
 body {
-    background-image: url("../images/BackGround_Home.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/Background-Img.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
 }
-
+/*====================
+Typography
+=====================*/
 html, body {
     margin: 0;
     height: 100%;
@@ -15,70 +17,193 @@ html {
     color: white;
 }
 
+
+/*====================
+Header and Nav
+=====================*/
 header{
-    /* background-color: bisque; */
-    padding: 20px;
+    background-color: #6984A9;
     align-items: center;
+
 }
 
 nav{
     /* background-color: aqua; */
     display: flex;
-    gap: 25px;
-    margin-left: 320px;
-    margin-top: 0px;
-    margin-right: 0px;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 nav a{
     font-size: 25px;
-}
-
-#Main_title{
-    text-align: center;
-    margin-top: 80px;
-    scroll-margin-top: 100px;
+    text-decoration: none;
+    color: #263B6A;
 }
 
 .Nav_Bar{
-    position: fixed;
-    background-color: lightblue;
     top: 0;
     width: 100%;
+    cursor: pointer;
 }
 
-.GitHub-Logo{
-    background-color: white;
-    width: 90px;
-    height: 80px;
+nav a:focus,
+nav a:hover{
+    color: #004ab3;
+}       
+
+
+/*====================
+Top Heading
+=====================*/
+
+#Main_title{
+    text-align: center;
+    margin-top: 20px;
+    scroll-margin-top: 100px;
 }
 
-.logo-Linkedin{
-    width: 100px;
-    height: 80px;
+/*====================
+Parts commmon 
+=====================*/
+#About,
+#Experience,
+#Skills,
+#Projects,
+#Connect{
+    text-align: center;
+}
+/*====================
+About
+=====================*/
+
+/*====================
+Experince
+=====================*/
+.list_school_exp{
+    text-align: left;
 }
 
-.work{
-    margin: 10px 0px;
-    margin-bottom: -5px;
-}
 .work_columns{
     display: flex;
-    gap: 100px;
-}
-
-.row1, .row2{
-    display: flex;
-    flex-direction: row;
-}
-
-.row1 p, h3, .row2 p, h3{
-    margin: 10px 20px;
+    justify-content: center;
+    gap: 20px;
 }
 
 .list_work_Exp{
-    margin-top: 10px;
+    text-align: left;
 }
+
+
+/*====================
+Skills
+=====================*/
+
+/*====================
+Projects
+=====================*/
+
+/*====================
+Logos
+=====================*/
+.logos{
+    color: rgb(165, 161, 161);
+}
+
+.logos:hover,
+.logos:focus{
+    cursor: pointer;
+    color: #004ab3;
+}
+
+
+/*====================
+Tablet media query
+=====================*/
+@media (min-width:600px){
+    #Main_title{
+        text-align: center;
+        margin-top: 40px;
+        scroll-margin-top: 40px;
+    }       
+    header{
+        background-color: #6984A9;
+        position: fixed;
+    }
+    nav{
+        /* background-color: aqua; */
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        justify-content: space-around;
+    }
+
+    #About{
+        scroll-margin-top: 30px;
+    }
+
+    #Experience{
+        scroll-margin-top: 30px;
+    }
+
+}
+
+/*====================
+Laptop media query
+=====================*/
+@media (min-width:1024px){
+    header{
+        background-color: #6984A9;
+        position: fixed;
+
+    }
+    nav{
+        /* background-color: aqua; */
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        
+    }
+
+    #About,
+    #Experience,
+    #Skills,
+    #Projects,
+    #Connect{
+        text-align: left;
+    }
+
+    .work_columns{
+        justify-content: left;
+    }
+
+    .row1{
+        display: grid;
+        grid-template-columns: 100px 100px;
+        grid-template-rows: 50px 60px;
+    }
+
+    .row1 > h3{
+        grid-column: 1 / -1;
+    }
+    
+
+    .row2{
+        display: grid;
+        grid-template-columns: 100px 100px;
+        grid-template-rows: 50px 60px;
+    }
+
+
+    .row2 > h3{
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+
 
 
 
