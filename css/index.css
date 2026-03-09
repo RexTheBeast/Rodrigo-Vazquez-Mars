@@ -123,6 +123,10 @@ Projects
 =====================*/
 
 /*====================
+Connect
+=====================*/
+
+/*====================
 Logos
 =====================*/
 .logos{
@@ -134,6 +138,70 @@ Logos
     cursor: pointer;
     color: #004ab3;
 }
+
+/*====================
+Leave a Message
+=====================*/
+#message_form{
+    text-align: center;
+}
+textarea{
+    resize:none;
+}
+label{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+/*====================
+Messages
+=====================*/
+#messages{
+    text-align: center;
+}
+
+#messages ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#messages li {
+  background: white;
+  color: #000;
+  padding: 12px 16px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+
+#messages li a {
+  font-weight: 600;
+  color: #0077cc;
+  text-decoration: none;
+  margin-right: 8px;
+}
+
+#messages button {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+#messages button:hover {
+  background: #d93636;
+}
+
+
 
 
 /*====================
@@ -173,9 +241,20 @@ Tablet media query
         list-style: none;
     }
 
-
+    
+    #messages ul{
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    textarea{
+        height: 100px;
+        width: 200px;
+    }
 
 }
+
+
 
 /*====================
 Laptop media query
@@ -226,6 +305,24 @@ Laptop media query
 
     .row2 > h3{
         grid-column: 1 / -1;
+    }
+
+    #message_form{
+        text-align: left;
+    }
+
+    #messages{
+        text-align: left;
+    }
+
+    #messages ul{
+        width: 40%;
+        margin: 0 0 auto;
+    }
+
+    textarea{
+        height: 200px;
+        width: 400px;
     }
 
 }
