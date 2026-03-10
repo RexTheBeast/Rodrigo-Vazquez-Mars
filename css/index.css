@@ -104,9 +104,15 @@ Experince
 /*====================
 Skills
 =====================*/
+.SkillsClass{
+    padding: 20px;
+}
+
 .SkillsClass ul {
   grid-template-columns: 1fr;
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .SkillsClass li {
@@ -121,6 +127,36 @@ Skills
 /*====================
 Projects
 =====================*/
+#Projects > h2{
+    color: white;
+}
+
+#Projects {
+  padding: 20px;
+  color: #000;
+  border-radius: 8px;
+}
+#Projects ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+#Projects li {
+  background: white;
+  padding: 16px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+
 
 /*====================
 Connect
@@ -153,6 +189,26 @@ label{
     margin-bottom: 6px;
     font-weight: 600;
 }
+
+input,
+textarea,
+.submit_bt{
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus{
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.submit_bt:hover,
+.submit_bt:focus{
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background-color: #09b32b;
+}
 /*====================
 Messages
 =====================*/
@@ -178,6 +234,7 @@ Messages
   justify-content: space-between;
   align-items: center;
   border: 1px solid #ddd;
+
 }
 
 #messages li a {
@@ -252,6 +309,11 @@ Tablet media query
         width: 200px;
     }
 
+    #Projects ul {
+        display: flex;
+        justify-content: center;
+    }
+
 }
 
 
@@ -323,6 +385,11 @@ Laptop media query
     textarea{
         height: 200px;
         width: 400px;
+    }
+
+    #Projects ul {
+        display: flex;
+        justify-content: left;
     }
 
 }
