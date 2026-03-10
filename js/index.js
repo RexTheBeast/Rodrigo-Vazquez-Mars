@@ -72,3 +72,32 @@ messageForm.addEventListener("submit", event =>{
     }
 );
 
+
+/*============== 
+API
+==============*/
+
+fetch("https://api.github.com/users/RexTheBeast/repos")
+    .then(response => response.json())
+    .then( data => {
+        var repositories = data;
+        console.log(repositories);
+
+        var projectSection = document.getElementById("Projects");
+
+        var projectList = projectSection.querySelector("ul");
+
+        for (let i =0; i<repositories.length; i++){
+            var project = document.createElement("li")
+
+            project.innerHTML = repositories[i].name;
+
+            projectList.appendChild(project);
+        }
+    })
+    .catch(error => {
+        console.error("No projects found:", error)
+
+        var projectSection = document.getElementById("Projects")
+        projectSection.innerHTML += "<p>Unable to load projects</p>"
+    })
